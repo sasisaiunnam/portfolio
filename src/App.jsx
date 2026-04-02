@@ -7,9 +7,8 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Project';
 import Education from './components/Education/Education';
 import Contact from './components/Contact./Contact';
-import ContactSidebar from './components/Contactsidebar/Contactsidebar';
 import Footer from './components/Footer/Footer';
-
+import ContactSidebar from './components/Contactsidebar/Contactsidebar'
 function App() {
   return (
     <div className="App">
