@@ -84,16 +84,8 @@
     flex-direction: row;
     justify-content: center;
     padding: 20px 0;
-    margin: 40px 0 20px 0;
-  }
-
-  .sidebar-links {
-    flex-direction: row;
-    margin-bottom: 0;
-    gap: 30px;
-  }
-
-  .sidebar-line {
-    display: none;
+    margin: 40px auto 20px auto; /* Added 'auto' for centering */
+    width: 100%; /* Ensures it spans the width to center the flex content */
+    animation: fadeIn 1s ease-in; /* Optional: simpler animation for mobile */
   }
 }
