@@ -1,0 +1,149 @@
+.projects-section {
+  padding: 8rem 5%;
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: #151b2e;
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 255, 136, 0.2);
+  border-color: #00ff88;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background: #1e2840;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #00ff88;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.project-card:hover .project-image::before {
+  left: 100%;
+}
+
+.project-card:hover .project-image svg {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00ff88;
+}
+
+.project-description {
+  color: #8892a6;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  padding: 0.4rem 0.9rem;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid #00ff88;
+  font-size: 0.75rem;
+  color: #00ff88;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #00ff88;
+  color: #0a0e27;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.project-link {
+  color: #00ff88;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-link:hover {
+  color: #e0e6ed;
+  transform: translateX(5px);
+}
+
+.project-link svg {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 5rem 4%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+}

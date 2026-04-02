@@ -1,0 +1,19 @@
+.footer {
+  padding: 3rem 5%;
+  text-align: center;
+  border-top: 1px solid rgba(0, 255, 136, 0.1);
+  color: #8892a6;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 4%;
+    font-size: 0.85rem;
+  }
+}
