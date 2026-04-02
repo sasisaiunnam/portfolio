@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter, FaInstagram } from 'react-icons/fa';
-import './ContactSidebar.css';
+import './Contactsidebar.css';
 
 function ContactSidebar() {
   return (
