@@ -1,0 +1,216 @@
+/* =============================================
+   EXPERIENCE SECTION STYLES
+   ============================================= */
+
+.experience {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.experience__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.experience__header {
+  margin-bottom: 60px;
+}
+
+/* Timeline */
+.experience__timeline {
+  position: relative;
+}
+
+.experience__item {
+  position: relative;
+  padding-left: 48px;
+}
+
+.experience__timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.experience__timeline-dot-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.experience__timeline-line {
+  position: absolute;
+  left: 9px;
+  top: 28px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-primary), transparent);
+}
+
+/* Card */
+.experience__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+}
+
+.experience__card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.experience__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-primary);
+  gap: 20px;
+}
+
+.experience__role {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 6px;
+}
+
+.experience__company {
+  font-size: 16px;
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.experience__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.experience__period,
+.experience__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Projects */
+.experience__projects {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.experience__project {
+  padding: 24px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.experience__project:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-hover);
+}
+
+.experience__project-header {
+  margin-bottom: 16px;
+}
+
+.experience__project-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 4px;
+}
+
+.experience__project-tagline {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+/* Highlights */
+.experience__highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience__highlights li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  padding-left: 24px;
+  position: relative;
+}
+
+.experience__highlights li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+/* Tags */
+.experience__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experience__tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-primary);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience__card-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .experience__card {
+    padding: 24px;
+  }
+
+  .experience__project {
+    padding: 16px;
+  }
+
+  .experience__item {
+    padding-left: 36px;
+  }
+}

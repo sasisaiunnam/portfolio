@@ -1,0 +1,6 @@
+/* App.css - Minimal global app styles */
+
+main {
+  position: relative;
+  z-index: 1;
+}
